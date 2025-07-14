@@ -1,0 +1,22 @@
+{
+  "appTitle": "DogWise",
+  "breedsListTitle": "All Breeds",
+  "searchHint": "Search breeds...",
+  "filterTitle": "Filters & Settings",
+  "applyButton": "Apply",
+  "resetButton": "Reset",
+  "themeSwitch": "Dark Theme",
+  "languageSwitch": "Language",
+  "noData": "No data available.",
+  "errorMessage": "Something went wrong. Please try again.",
+  "offlineMessage": "You are offline. Showing cached data.",
+  "offlineMode": "You are offline. Showing cached data.",
+  "pullToRefresh": "Pull to refresh",
+  "breedDetailsTitle": "Breed Details",
+  "funFactTitle": "Fun Fact",
+  "galleryTitle": "Gallery",
+  "recognitionTitle": "Breed Recognition",
+  "recognitionResult": "Suggested breed: {breedName}",
+  "loadPhoto": "Load photo",
+  "takePhoto": "Take photo"
+}

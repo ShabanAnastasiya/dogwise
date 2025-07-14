@@ -1,0 +1,22 @@
+{
+  "appTitle": "DogWise",
+  "breedsListTitle": "Все породы",
+  "searchHint": "Поиск по породе...",
+  "filterTitle": "Фильтры и настройки",
+  "applyButton": "Применить",
+  "resetButton": "Сбросить",
+  "themeSwitch": "Тёмная тема",
+  "languageSwitch": "Язык",
+  "noData": "Нет данных.",
+  "errorMessage": "Что-то пошло не так. Попробуйте ещё раз.",
+  "offlineMessage": "Вы офлайн. Показаны кэшированные данные.",
+  "offlineMode": "Вы не в сети. Отображение кэшированных данных.",
+  "pullToRefresh": "Потяните для обновления",
+  "breedDetailsTitle": "Детали породы",
+  "funFactTitle": "Интересный факт",
+  "galleryTitle": "Галерея",
+  "recognitionTitle": "Распознавание породы",
+  "recognitionResult": "Предполагаемая порода: {breedName}",
+  "loadPhoto": "Загрузить фото",
+  "takePhoto": "Сделать фото"
+}
