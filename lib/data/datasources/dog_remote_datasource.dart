@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'dart:developer' as developer;
 import 'package:hive/hive.dart';
 import '../../core/models/dog_breed.dart';
 
@@ -65,7 +66,7 @@ class DogRemoteDatasource {
       final images = (response.data['message'] as List<dynamic>).cast<String>();
       return images;
     } catch (e) {
-      print('[DogRemoteDatasource] fetchBreedGallery error: $e');
+      developer.log('[DogRemoteDatasource] fetchBreedGallery error: $e', name: 'DogRemoteDatasource');
       return [];
     }
   }

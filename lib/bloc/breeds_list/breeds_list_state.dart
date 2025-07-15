@@ -12,13 +12,11 @@ class BreedsListInitial extends BreedsListState {}
 class BreedsListLoading extends BreedsListState {}
 class BreedsListLoaded extends BreedsListState {
   final List<DogBreed> breeds;
-  final int page;
-  final bool hasMore;
   final bool isFromCache;
-  const BreedsListLoaded(this.breeds, {this.page = 0, this.hasMore = true, this.isFromCache = false});
+  const BreedsListLoaded(this.breeds, {this.isFromCache = false});
 
   @override
-  List<Object?> get props => [breeds, page, hasMore, isFromCache];
+  List<Object?> get props => [breeds, isFromCache];
 }
 class BreedsListError extends BreedsListState {
   final String message;
@@ -28,11 +26,4 @@ class BreedsListError extends BreedsListState {
   List<Object?> get props => [message];
 }
 class BreedsListEmpty extends BreedsListState {}
-class BreedsListLoadingMore extends BreedsListState {
-  final List<DogBreed> breeds;
-  final int page;
-  const BreedsListLoadingMore(this.breeds, this.page);
 
-  @override
-  List<Object?> get props => [breeds, page];
-}

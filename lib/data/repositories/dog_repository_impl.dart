@@ -8,8 +8,26 @@ class DogRepositoryImpl {
 
   DogRepositoryImpl(this.remoteDatasource, this.connectivityService);
 
-  Future<List<DogBreed>> getBreeds() async {
-    return await remoteDatasource.fetchBreeds();
+  Future<List<DogBreed>> getBreeds({bool forceNetwork = false}) async {
+    final isConnected = await connectivityService.isConnected();
+    final cached = await remoteDatasource.getCachedBreeds();
+    if (forceNetwork && isConnected) {
+      try {
+        final breeds = await remoteDatasource.fetchBreeds();
+        await remoteDatasource.cacheBreeds(breeds);
+        return breeds;
+      } catch (e) {
+        if (cached.isNotEmpty) return cached;
+        rethrow;
+      }
+    }
+    if (cached.isNotEmpty) return cached;
+    if (isConnected) {
+      final breeds = await remoteDatasource.fetchBreeds();
+      await remoteDatasource.cacheBreeds(breeds);
+      return breeds;
+    }
+    throw Exception('No internet connection and no cached data');
   }
 
   Future<List<DogBreed>> getBreedsPaginated(int page, {int pageSize = 25, bool forceNetwork = false}) async {

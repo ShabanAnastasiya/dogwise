@@ -9,10 +9,4 @@ abstract class BreedsListEvent extends Equatable {
 
 class FetchBreeds extends BreedsListEvent {}
 
-class FetchBreedsPage extends BreedsListEvent {
-  final int page;
-  FetchBreedsPage(this.page);
-
-  @override
-  List<Object?> get props => [page];
-}
+class RefreshBreeds extends BreedsListEvent {}
